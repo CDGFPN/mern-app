@@ -1,5 +1,6 @@
 import React from "react";
 import "./UsersList.css";
+// import Card from "../../shared/components/UIElements/Card";
 import UserItem from "./UserItem";
 
 const UsersList = (props) => {
@@ -11,7 +12,7 @@ const UsersList = (props) => {
     );
   }
   return (
-    <ul>
+    <ul className="users-list">
       {props.items.map((user) => {
         return(
         <UserItem
