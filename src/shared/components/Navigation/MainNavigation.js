@@ -1,23 +1,30 @@
 import React from "react";
 import MainHeader from "./MainHeader";
-import './MainNavigation.css'
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import NavLinks from "./NavLinks";
+import SideDrawer from "./SideDrawer";
+// import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import "./MainNavigation.css";
 
 const MainNavigation = (props) => {
   return (
-    <MainHeader>
-      <button className="main-navigation__menu-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <h1 className="main-navigation__title">
-        SeusLugares
-      </h1>
-      <nav>
-        ...
-      </nav>
-    </MainHeader>
+    <React.Fragment>
+      <SideDrawer>
+        <nav className="main-navigation__drawer-nav">
+          <NavLinks />
+        </nav>
+      </SideDrawer>
+      <MainHeader>
+        <button className="main-navigation__menu-btn">
+          <span />
+          <span />
+          <span />
+        </button>
+        <h1 className="main-navigation__title">ViagemShare</h1>
+        <nav>
+          <NavLinks />
+        </nav>
+      </MainHeader>
+    </React.Fragment>
   );
 };
 
